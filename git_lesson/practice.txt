@@ -1,1 +1,2 @@
 This line was added to 'practice.txt'
+Changing the file again to track these changes
