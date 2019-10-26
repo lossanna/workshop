@@ -1,0 +1,4 @@
+nano sample_names.txt
+sample_A
+sample_B
+sample_C

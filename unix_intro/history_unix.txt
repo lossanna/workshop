@@ -1,0 +1,171 @@
+    1  cd ~/Desktop/workshop/unix_intro
+    2  date
+    3  date -u
+    4  date-u
+    5  date u
+    6  head example.txt
+    7  head -n 5 example.txt
+    8  man head
+    9  head --help
+   10  pwd
+   11  ls
+   12  ls experiment
+   13  head experiment/notes.txt
+   14  head example.txt 
+   15  cd experiment/
+   16  pwd
+   17  ls
+   18  head notes.txt
+   19  cd ..
+   20  pwd
+   21  ls
+   22  cd ~/Desktop/workshop/unix_intro
+   23  head example.txt
+   24  tail example.txt
+   25  less example.txt
+   26  wc example.txt 
+   27  wc -1 example.txt 
+   28  wc -l example.txt 
+   29  wc --help
+   30  ls
+   31  cp example.txt example_copy.txt 
+   32  lss
+   33  ls
+   34  ls 
+   35  cp example.txt data/example_copy.txt
+   36  ls data
+   37  ls
+   38  cp experiment/notes.txt .
+   39  ls
+   40  ls
+   41  ls experiment/
+   42  ls
+   43  mv example_copy.txt  experiment/
+   44  ls
+   45  ls experiment/
+   46  ls
+   47  mv notes.txt notes_old.txt
+   48  ls
+   49  ls
+   50  rm notes_old
+   51  ls
+   52  ls experiment/
+   53  rm experiment/example_copy.txt 
+   54  ls
+   55  ls experiment/
+   56  nano
+   57  ls
+   58  pwd
+   59  head sample_names.txt 
+   60  ls
+   61  mkdir subset
+   62  ls
+   63  rmdir subset/
+   64  ks
+   65  ls
+   66  ls experiment/
+   67  ls
+   68  rm notes_old.txt 
+   69  ls
+   70  cp -r experiment/ experiment_cop
+   71  rmdir -r experiment_cop
+   72  rmdir --help
+   73  rm -r experiment_copy/
+   74  rm -r experiment_cop
+   75  ls
+   76  rm --help
+   77  mv sample_names.txt sample_names_2.txt 
+   78  ls
+   79  wc -l example.txt 
+   80  ls
+   81  ls | wc -l
+   82  ls data/
+   83  ls data/all_samples
+   84  ls data/all_samples | wc -l
+   85  ls
+   86  ls > directory_contents.txt
+   87  ls
+   88  head directory_contents.txt 
+   89  ls experiment/ > directory_contents.txt
+   90  head directory_contents.txt 
+   91  ls >> directory_contents.txt 
+   92  head directory_contents.txt 
+   93  ls *.txt
+   94  cd data/all_samples/
+   95  ls
+   96  ls *.txt
+   97  ls *.tsv
+   98  ls *.fq
+   99  ls | wc -l
+  100  ls *.fq | wc -l
+  101  ls *.txt | wc -l
+  102  ls *.tsv | wc -l
+  103  mkdir fastq_files
+  104  ls fastq_files/
+  105  ls *.fq
+  106  mv *.fq fastq_files/
+  107  ls fastq_files/
+  108  ls | wc -l
+  109  history | tail
+  110  history 
+  111  less --help
+  112  history | less
+  113  cd fastq_files/
+  114  ls
+  115  ls sample_1*.fq
+  116  ls sample_1?.fq
+  117  cd ~/Desktop/workshop/unix_intro
+  118  cd six_commands/
+  119  ls
+  120  head gene_annotations.tsv 
+  121  head -n gene_annotations.tsv
+  122  head -n 1 gene_annotations.tsv
+  123  wc -l gene_annotations.tsv
+  124* 
+  125* 
+  126  cut -f 1 gene_annotations.tsv | head
+  127  cut -f 1,3 gene_annotations.tsv | head
+  128  cut -f 1-3 gene_annotations.tsv | head
+  129  cut -f 1-3, 7-9 gene_annotations.tsv | head
+  130  cut -f 1-3 7-9 gene_annotations.tsv | head
+  131  cut -d, -f 1-3 example_gene_annotations.csv | head
+  132  head colors
+  133  head colors.txt
+  134  grep blue colors.txt 
+  135  grep re colors.txt 
+  136  grep K09765 gene_annotations.tsv
+  137  grep K1897 gene_annotations.tsv
+  138  grep -c K1897 gene_annotations.tsv
+  139  head colores.txt
+  140  paste colors.txt colores.txt
+  141  head genes_and_seqs.tsv 
+  142  less -S genes_and_seqs.tsv 
+  143  pwd
+  144  cd ..
+  145  my_var=ANGUS
+  146  echo $my_var 
+  147  my_var=TUCSON
+  148  echo $my_var 
+  149  echo whatever text you want it to echo
+  150  echo my_var
+  151  echo $my_var 
+  152  my_new_var="Tucson, Arizona, USA"
+  153  echo $my_new_var 
+  154  var_with_spaces="variable with spaces in the name require quotes around the name"
+  155  question="why would we use bash when we can use RStudio which is much friendlier"
+  156  echo $question
+  157  for item in earth mars venus; do echo %item; done
+  158  for item in earth mars venus; do echo $item; done
+  159  for item in earth mars venus; do echo $item; done
+  160  for item in earth mars venus; do echo $item > planets.txt; done
+  161  ls
+  162  planets.txt
+  163  head planets.txt
+  164  for item in earth mars venus; do echo $item >> planets.txt
+  165  for item in earth mars venus; do echo
+  166  for item in earth mars venus; do echo $item >> planets.txt; done
+  167  head planets.txt 
+  168  cat planets.txt 
+  169  for item in $(cat planets.txt); do echo $item; done
+  170  for variable in $(head directory_contents.txt); do echo $variable; done
+  171  history > history_unix.txt
