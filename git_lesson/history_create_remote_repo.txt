@@ -1,0 +1,7 @@
+    1  pwd
+    2  cd ~/Desktop/workshop
+    3  git remote add origin https://github.com/lossanna/workshop.git
+    4  git push -u origin master
+    5  get remote --verbose
+    6  git remote --verbose
+    7  history > history_create_remote_repos
