@@ -1,2 +1,1 @@
-This line was added to 'practice.txt'
-Changing the file again to track these changes
+I am changing the text, although I am unsure of when I would ever use .txt documents instead of Word bc like what
